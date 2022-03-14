@@ -1,8 +1,3 @@
-type RiskScore = 'ineligible' | 'economic' | 'regular' | 'responsible';
+import { InsuranceType } from './InsuranceType';
 
-export interface RiskProfile {
-  auto: RiskScore;
-  disability: RiskScore;
-  home: RiskScore;
-  life: RiskScore;
-}
+export type RiskProfile = Record<InsuranceType, number | null>;
